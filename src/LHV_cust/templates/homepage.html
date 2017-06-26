@@ -1,0 +1,65 @@
+{% extends "site_base.html" %}
+
+{% load staticfiles %}
+
+{% load i18n %}
+
+{% block head_title %} - $89 Dryer Vent Cleaning - Professional Service{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+    <section class="container text-center">
+        <div class="jumbotron" style="background-color: rgba(255,255,255,.5);">
+            {% include "_messages.html" %}
+            <h1>
+                {% blocktrans %}
+                Lehigh Valley Lint Removal
+                {% endblocktrans %}
+            </h1>
+            <!-- {% if not user.is_authenticated %}
+            {% url "account_login" as login_url %}
+            {% url "account_signup" as signup_url %}
+            <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn btn-default">Log In</a> or <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
+            {% endif %} -->
+        </div>
+    </section>
+    <section style="background: url({% static "img/clothesline.jpg" %})">
+        <div class="container text-center" style="background-color: rgba(255,255,255,.5);">
+            <h2>{% blocktrans %}Who are we?{% endblocktrans %}</h2>
+            <p class="lead">
+                {% blocktrans %}
+                <b>Lehigh Valley Lint Removal</b> specializes in....
+                {% endblocktrans %}
+            </p>
+            <div class="feature-columns">
+                <div>
+                    <i class="fa fa-cubes fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>Services.</b> We provide .....
+                    {% endblocktrans %}
+                </div>
+                <div>
+                    <i class="fa fa-puzzle-piece fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>Who we are.</b> Our mission....
+                    {% endblocktrans %}
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                    </div>                    
+                </div>
+                <div>
+                    <i class="fa fa-tint fa-3x"></i><br>
+                    {% blocktrans %}
+                    <b>Contact Us</b> We are reasdy to help....
+                    {% endblocktrans %}
+                </div>
+            </div>
+            <p class="lead text-center">
+                {% blocktrans %}
+                More information here ....
+                {% endblocktrans %}
+            </p>
+        </div>
+    </section>
+{% endblock %}
